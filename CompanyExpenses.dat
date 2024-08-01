@@ -1,2 +1,4 @@
-invoiceID, invoiceDate, driverID, (itemID, itemDesc, itemCost, itemQuantity, itemTotal)*?, invoiceSubtotal, invoiceHST, invoiceTtoal
-0000001, 2024-10-20, 0001, (0001, 1L Gasoline, $1.70, 20, $34.00), (0002, 3.78L Windshield Washer Fluid, $4.99, 1, $4.99), $38.99, $5.85, $44.84
+invoiceID, itemID, invoiceitemCompID, invoiceDate, driverID, itemDesc, itemCost, itemQuantity, itemTotal, invoiceSubtotal, invoiceHST, invoiceTtoal
+1001, 1001, 10011001, 2024-10-20, 0001, 1L Gasoline, $1.70, 20, $34.00, $83.98, $12.60, $96.58
+1001, 1002, 10011002, 2024-10-20, 0001, 3.78L Windshield Washer Fluid, $4.99, 1, $4.99, $83.98, $12.60, $96.58
+1001, 1003, 10011003, 2024-10-20, 0001, 5L Motor Oil, $44.99, 1, $44.99, $83.98, $12.60, $96.58
