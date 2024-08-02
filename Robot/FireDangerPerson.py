@@ -7,8 +7,6 @@
 # move 0.3 meters forward – the max distance is 5 meters - if you need to move
 # more than 5 meters you need to set up two – or more – commands.)
 
-
-import time
 def vision_recognized_marker_letter_F(msg):
     vision_ctrl.disable_detection(rm_define.vision_detection_marker)
     vision_ctrl.detect_marker_and_aim(rm_define.marker_letter_F)
