@@ -4,6 +4,7 @@
 
 #Import libraries
 import NotifLib
+import CompanyRevEnter
 
 #Import options
 
@@ -40,7 +41,7 @@ while True:
     if choice == 1:
         print("run 1")
     elif choice == 2:
-        print("run 2")
+        CompanyRevEnter.companyRevEnter()
     elif choice == 3:
         print("run 3")
     elif choice == 4:

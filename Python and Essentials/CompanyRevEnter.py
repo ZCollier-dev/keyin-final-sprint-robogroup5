@@ -90,10 +90,20 @@ def companyRevEnter():
         TRANSACTION_ID += 1
 
         print()
-        TotalIterations = 30
+        TotalIterations = 10
         Message = "Saving Data ..."
         for i in range(TotalIterations + 1):
             time.sleep(0.1)  # Simulate some work
-            ProgressBar(i, TotalIterations, prefix=Message, suffix='Complete', length=50)
+            ProgressBar(i, TotalIterations, prefix=Message, suffix='Complete', length=30)
         print() #For spacing
         print()
+    
+    #Housekeeping
+    f = open('Defaults.dat', 'w')
+    TRANSACTION_ID = f.write('{}\n'.format(TRANSACTION_ID))
+    DRIVER_ID = f.write('{}\n'.format(DRIVER_ID))
+    MONTHLY_STAND_FEE = f.write('{}\n'.format(MONTHLY_STAND_FEE))
+    DAILY_RENTAL_FEE = f.write('{}\n'.format(DAILY_RENTAL_FEE))
+    WEEKLY_RENTAL_FEE = f.write('{}\n'.format(WEEKLY_RENTAL_FEE))
+    HST_RATE = f.write('{}\n'.format(HST_RATE))
+    f.close()
