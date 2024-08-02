@@ -71,7 +71,7 @@ def companyRevEnter():
         transactionTotal = transactionAmt + transactionHST
         transactionTotaldsp = ConvLib.DollarToStrConv(transactionTotal)
 
-        entry = f'{TRANSACTION_ID}, {transactionDatedsp}, {transactionDesc}, {driverIDdsp}, {transactionAmtdsp}, {transactionHSTdsp}, {transactionTotaldsp}\n'
+        entry = f'{TRANSACTION_ID}, {transactionDatedsp}, {transactionDesc}, {driverIDdsp}, {transactionAmt}, {transactionHST}, {transactionTotal}\n'
 
         #Display Outputs
         print(f'''Please review your inputs:
