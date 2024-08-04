@@ -13,6 +13,7 @@ def StrToDateConv(dateToConv): #Parse String into a datetime
         print("---!!!---")
         print("ERR: Invalid Date Format - please use 'YYYY-MM-DD'.")
         print("---!!!---")
+        return False
     else:
         return dateReturn
 
@@ -27,6 +28,7 @@ def DollarToStrConv(dollarValue): #Format float into a String w/ dollar value
         print("---!!!---")
         print("ERR: Please enter a valid number.")
         print("---!!!---")
+        return False
     else:
         dollarValueStr = "${:,.2f}".format(dollarValue)
         return dollarValueStr
@@ -40,5 +42,6 @@ def DollarToFloatConv(dollarValue): #Format String w/ dollar value into Float
         print("---!!!---")
         print("ERR: Please enter a valid string.")
         print("---!!!---")
+        return False
     else:
         return dollarValueFloat

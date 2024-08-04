@@ -8,6 +8,7 @@ def companyRevEnter():
     import NotifLib
     import ProgressBars
     import datetime
+    import time
 
     #Define Constants
     f = open('Defaults.dat', 'r')
@@ -16,7 +17,7 @@ def companyRevEnter():
     MONTHLY_STAND_FEE = float(f.readline())
     DAILY_RENTAL_FEE = float(f.readline())
     WEEKLY_RENTAL_FEE = float(f.readline())
-    HST_RATE = float(f.realine())
+    HST_RATE = float(f.readline())
     f.close()
 
     #Define Functions
@@ -43,12 +44,9 @@ def companyRevEnter():
             break
 
         while True:
-            try:
-                transactionDatedsp = input("Enter Transaction Date (YYYY-MM-DD): ")
-                transactionDate = ConvLib.StrToDateConv(transactionDatedsp)
-            except:
-                NotifLib.ErrorMessage("Please enter the date in the format YYYY-MM-DD.")
-            else:
+            transactionDatedsp = input("Enter Transaction Date (YYYY-MM-DD): ")
+            transactionDate = ConvLib.StrToDateConv(transactionDatedsp)
+            if transactionDate != False:
                 break
 
         transactionDesc = input("Enter the transaction description: ")
@@ -71,7 +69,7 @@ def companyRevEnter():
         transactionTotal = transactionAmt + transactionHST
         transactionTotaldsp = ConvLib.DollarToStrConv(transactionTotal)
 
-        entry = f'{TRANSACTION_ID}, {transactionDatedsp}, {transactionDesc}, {driverIDdsp}, {transactionAmt}, {transactionHST}, {transactionTotal}\n'
+        
 
         #Display Outputs
         print(f'''Please review your inputs:
@@ -82,7 +80,9 @@ def companyRevEnter():
         Transaction Amount: {transactionAmtdsp}
         Transaction HST: {transactionHSTdsp}
         Transaction Total: {transactionTotaldsp}''')
-
+        
+        entry = f'{TRANSACTION_ID}, {transactionDatedsp}, {transactionDesc}, {driverIDdsp}, {transactionAmt:.2f}, {transactionHST:.2f}, {transactionTotal:.2f}\n'
+        
         f = open('CompanyRevs.dat', 'a')
         f.write(entry)
         f.close()
@@ -94,7 +94,7 @@ def companyRevEnter():
         Message = "Saving Data ..."
         for i in range(TotalIterations + 1):
             time.sleep(0.1)  # Simulate some work
-            ProgressBar(i, TotalIterations, prefix=Message, suffix='Complete', length=30)
+            ProgressBars.ProgressBar(i, TotalIterations, prefix=Message, suffix='Complete', length=30)
         print() #For spacing
         print()
     

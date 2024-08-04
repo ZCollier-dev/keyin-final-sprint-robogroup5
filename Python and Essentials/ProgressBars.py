@@ -22,7 +22,7 @@ TotalIterations = 30
 Message = "Saving Data ..."
 for i in range(TotalIterations + 1):
     time.sleep(0.1)  # Simulate some work
-    ProgressBar(i, TotalIterations, prefix=Message, suffix='Complete', length=50)
+    ProgressBars.ProgressBar(i, TotalIterations, prefix=Message, suffix='Complete', length=50)
 print() #For spacing
 print()
 '''
