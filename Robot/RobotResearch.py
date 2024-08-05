@@ -17,7 +17,7 @@ def robo_research_full_auto_sweep():
     ir_blaster_ctrl.set_fire_count(2)
     gimbal_ctrl.angle_ctrl(-15, -25)
     led_ctrl.set_top_led(rm_define.armor_top_all, 255, 0, 0, rm_define.effect_breath)
-    time.sleep(0.5)
+    time.sleep(0.5) #Simulate spinup
     gun_ctrl.fire_continuous()
     ir_blaster_ctrl.fire_continuous()
     gimbal_ctrl.angle_ctrl(35, 25)
