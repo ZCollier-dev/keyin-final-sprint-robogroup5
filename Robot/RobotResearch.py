@@ -31,6 +31,7 @@ def robo_research_full_auto_sweep():
     time.sleep(1)
     gun_ctrl.stop()
     ir_blaster_ctrl.stop()
+    media_ctrl.play_sound(rm_define.media_sound_recognize_success, wait_complete_flag=False)
     led_ctrl.set_top_led(rm_define.armor_top_all, 0, 0, 255, rm_define.effect_always_on)
     time.sleep(1)
     led_ctrl.set_top_led(rm_define.armor_top_all, 0, 0, 255, rm_define.effect_always_off)
