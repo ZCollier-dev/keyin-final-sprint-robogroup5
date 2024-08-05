@@ -21,17 +21,20 @@ def robo_research_full_auto_sweep():
     gun_ctrl.fire_continuous()
     ir_blaster_ctrl.fire_continuous()
     gimbal_ctrl.angle_ctrl(35, 25)
+    #time.sleep(1) #Remove comment if the firing stops before the first movement ends
     gun_ctrl.stop()
     ir_blaster_ctrl.stop()
     gimbal_ctrl.angle_ctrl(-15, 25)
+    #time.sleep(1) #Remove comment if the firing stops before the second movement ends
     gun_ctrl.fire_continuous()
     ir_blaster_ctrl.fire_continuous()
     gimbal_ctrl.angle_ctrl(35, -25)
+    #time.sleep(1) #Remove comment if the firing stops before the third movement ends
     gun_ctrl.stop()
     ir_blaster_ctrl.stop()
     media_ctrl.play_sound(rm_define.media_sound_recognize_success, wait_complete_flag=False)
     led_ctrl.set_top_led(rm_define.armor_top_all, 0, 0, 255, rm_define.effect_always_on)
-    time.sleep(1)
+    time.sleep(1) #Simulate cooldown
     led_ctrl.set_top_led(rm_define.armor_top_all, 0, 0, 255, rm_define.effect_always_off)
     gimbal_ctrl.set_rotate_speed(60)
     gimbal_ctrl.recenter()
