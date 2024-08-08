@@ -1,5 +1,5 @@
 # keyin-final-sprint-robogroup5
-Final Sprint Repo for Robot Group 5. Contributors: Zachary Collier, Sarah Murphy, Kyle / Scarlett Budgell, Alex Russel, Michael Ward.
+Final Sprint Repo for Robot Group 5. Contributors: Zachary Collier, Sarah Murphy, Kyle / Scarlett Budgell, Alex Russel, Michael Ward, and minor contributions by Valeriia Holotiuk.
 
 ESSENTIALS: Has files containing an ERD, reports, and data files, both full and empty.
 
