@@ -80,23 +80,34 @@ def companyRevEnter():
         Transaction Amount: {transactionAmtdsp}
         Transaction HST: {transactionHSTdsp}
         Transaction Total: {transactionTotaldsp}''')
-        
-        entry = f'{TRANSACTION_ID}, {transactionDatedsp}, {transactionDesc}, {driverIDdsp}, {transactionAmt:.2f}, {transactionHST:.2f}, {transactionTotal:.2f}\n'
-        
-        f = open('CompanyRevs.dat', 'a')
-        f.write(entry)
-        f.close()
 
-        TRANSACTION_ID += 1
+        while True:
+            choice = input("Do these values look correct? (Y for Yes, N for No)").upper()
+            if len(choice) != 1:
+                NotifLib.ErrorMessage("Please enter either 'Y' or 'N'.")
+            elif choice != "N" or choice != "Y":
+                NotifLib.ErrorMessage("Please enter either 'Y' or 'N'.")
+            elif choice == "N":
+                print("Returning to top...")
+                break
+            else:
+                entry = f'{TRANSACTION_ID}, {transactionDatedsp}, {transactionDesc}, {driverIDdsp}, {transactionAmt:.2f}, {transactionHST:.2f}, {transactionTotal:.2f}\n'
+                
+                f = open('CompanyRevs.dat', 'a')
+                f.write(entry)
+                f.close()
 
-        print()
-        TotalIterations = 10
-        Message = "Saving Data ..."
-        for i in range(TotalIterations + 1):
-            time.sleep(0.1)  # Simulate some work
-            ProgressBars.ProgressBar(i, TotalIterations, prefix=Message, suffix='Complete', length=30)
-        print() #For spacing
-        print()
+                TRANSACTION_ID += 1
+
+                print()
+                TotalIterations = 10
+                Message = "Saving Data ..."
+                for i in range(TotalIterations + 1):
+                    time.sleep(0.1)  # Simulate some work
+                    ProgressBars.ProgressBar(i, TotalIterations, prefix=Message, suffix='Complete', length=30)
+                print() #For spacing
+                print()
+                break
     
     #Housekeeping
     f = open('Defaults.dat', 'w')
