@@ -5,6 +5,8 @@
 #Import libraries
 import NotifLib
 import CompanyRevEnter
+import CorporateSummaryReport
+import CompProfListing
 
 #Import options
 
@@ -22,7 +24,7 @@ while True:
     5. Record Employee Payment.
     6. Print Company Profit Listing.
     7. Print Driver Financial Listing.
-    8. Corporate SUmmary Report.
+    8. Corporate Summary Report.
     9. Quit Program.
     ''')
     while True:
@@ -49,11 +51,11 @@ while True:
     elif choice == 5:
         print("run 5")
     elif choice == 6:
-        print("run 6")
+        CompProfListing.compProfListing()
     elif choice == 7:
         print("run 7")
     elif choice == 8:
-        print("run 8")
+        CorporateSummaryReport.corporateSummaryReport()
     else:
         print("Quitting Program... have a great day!")
         break

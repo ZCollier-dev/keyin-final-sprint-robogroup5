@@ -9,7 +9,7 @@ transactionID, transactionDate, transactionDesc, driverID, transactionAmt, trans
 134, 2024-10-25, 11 Blackmarsh Rd. to Avalon Mall, 1920, 50.00, 7.50, 57.50
 135, 2024-10-27, 5 Elizabeth Dr. to Costco, 1919, 70.00, 10.50, 80.50
 136, 2024-10-28, CNA Ridge Rd. to 30 Kelsey Dr., 1916, 90.00, 13.50, 103.50
-137, 2024-10-30, 40 McDonald Dr. to MUN Engineering Building, 1918, 30.00, 4.50, 34.50
+137, 2024-10-30, 4 McDonald Dr. to MUN Engineering, 1918, 30.00, 4.50, 34.50
 138, 2024-10-31, 456 Main St. to 123 Main St., 1916, 20.00, 3.00, 23.00
 139, 2024-10-31, 246 Main St. to 123 Main St., 1917, 10.00, 1.50, 11.50
 140, 2024-10-31, 12 Torbay Rd. to 123 Main St., 1918, 30.00, 4.50, 34.50
